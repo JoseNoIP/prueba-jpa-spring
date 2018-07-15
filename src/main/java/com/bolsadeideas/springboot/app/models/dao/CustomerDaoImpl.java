@@ -21,7 +21,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 	@Transactional(readOnly=true)
 	@Override
 	public List<Customer> findAll() {
-		return entityManager.createQuery("from CUSTOMERS").getResultList();
+		return entityManager.createQuery("from Customer").getResultList();
 	}
 
 }

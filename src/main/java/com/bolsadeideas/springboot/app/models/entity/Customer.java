@@ -26,6 +26,8 @@ public class Customer implements Serializable {
 	private Long id;
 	
 	private String name;
+	
+	@Column(name="last_name")
 	private String lastName;
 	private String email;
 	
