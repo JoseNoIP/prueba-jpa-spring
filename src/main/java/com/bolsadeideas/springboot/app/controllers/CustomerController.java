@@ -16,7 +16,7 @@ public class CustomerController {
 	@Qualifier("customerDaoJPA") //Requerido solo cuando más de un JPA implementa la misma interfaz
 	private ICustomerDao customerDao;
 	
-	@RequestMapping(name="/customers", method=RequestMethod.GET)
+	@RequestMapping(value="customers", method=RequestMethod.GET)
 	public String index(Model model) {
 		
 		model.addAttribute("title", "All customers");
