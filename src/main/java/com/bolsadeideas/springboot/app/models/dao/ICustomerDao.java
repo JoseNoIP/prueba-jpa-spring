@@ -7,5 +7,7 @@ import com.bolsadeideas.springboot.app.models.entity.Customer;
 public interface ICustomerDao {
 	
 	public List<Customer> findAll();
+	
+	public void save(Customer customer);
 
 }
