@@ -26,7 +26,7 @@
 		<h1 th:text="${title}"
 			class="text-secondary border border-success border-top-0 border-left-0 border-right-0"></h1>
 					
-		<form th:action="@{/customers/new}" th:object="${customer}" method="post">
+		<form th:action="${action}" th:object="${customer}" method="post">
 			<div class="form-group row">
 				<label for="nombre" class="col-sm-2 col-form-label">Name</label>
 				<div class="col-sm-6">

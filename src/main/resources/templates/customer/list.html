@@ -33,6 +33,7 @@
 					<th>Last Name</th>
 					<th>E-Mail</th>
 					<th>Date</th>
+					<th>Accions</th>
 				</tr>
 			</thead>
 			<tbody th:each="customer: ${customers}">
@@ -42,6 +43,7 @@
 					<td th:text="${customer.lastName}" />
 					<td th:text="${customer.email}" />
 					<td th:text="${customer.createdAt}" />
+					<td><a class="btn btn-primary btn-xs" th:href="@{/customers/} + ${customer.id} + '/edit'">Edit</a></td>
 			</tbody>
 		</table>
 	</div>

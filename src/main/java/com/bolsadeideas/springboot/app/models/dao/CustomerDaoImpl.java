@@ -29,5 +29,17 @@ public class CustomerDaoImpl implements ICustomerDao {
 	public void save(Customer customer) {
 		entityManager.persist(customer);		
 	}
+	
+	@Transactional
+	@Override
+	public void update(Customer customer) {
+		entityManager.merge(customer);		
+	}
+
+	@Transactional(readOnly=true)
+	@Override
+	public Customer findOne(Long id) {
+		return entityManager.find(Customer.class, id);
+	}
 
 }

@@ -42,7 +42,6 @@ public class Customer implements Serializable {
 	
 	@Column(name="created_at")
 	@Temporal(TemporalType.DATE)
-	@NotNull
 	private Date createdAt;
 	
 	@PrePersist
