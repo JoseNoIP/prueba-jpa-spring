@@ -12,11 +12,13 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.bolsadeideas.springboot.app.models.dao.ICustomerDao;
 import com.bolsadeideas.springboot.app.models.entity.Customer;
 
 @Controller
+@SessionAttributes("customer")
 public class CustomerController {
 
 	@Autowired
@@ -88,4 +90,21 @@ public class CustomerController {
 		return "redirect:/customers";
 		
 	}
+	
+	/*@RequestMapping(value="/customers/{id}/edit", method=RequestMethod.DELETE)
+	public String delete(@PathVariable(value="id") Long id) {
+		
+		customer.setId(id);
+		
+		if(result.hasErrors()) {
+			model.put("title", "Update Customer");
+			model.put("action", "/customers/" + id + "/edit");
+			
+			return "/customer/form";
+		}
+		customerDao.delete(id);
+		
+		return "redirect:/customers";
+		
+	}*/
 }

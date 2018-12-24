@@ -42,4 +42,12 @@ public class CustomerDaoImpl implements ICustomerDao {
 		return entityManager.find(Customer.class, id);
 	}
 
+	@Override
+	@Transactional
+	public void delete(Long id) {
+		Customer customer = findOne(id);
+		entityManager.remove(customer);
+		
+	}
+
 }

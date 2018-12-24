@@ -13,5 +13,7 @@ public interface ICustomerDao {
 	public void update(Customer customer);
 	
 	public Customer findOne(Long id);
+	
+	public void delete(Long id);
 
 }
